@@ -1,4 +1,5 @@
 <?php
+
 namespace Mageplaza\HelloWorld\Setup;
 
 class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
@@ -94,3 +95,4 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
         }
         $installer->endSetup();
     }
+}
