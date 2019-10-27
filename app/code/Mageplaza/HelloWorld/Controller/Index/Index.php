@@ -10,7 +10,8 @@ class Index extends \Magento\Framework\App\Action\Action
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
         \Magento\Framework\View\Result\PageFactory $pageFactory,
-        \Mageplaza\HelloWorld\Model\PostFactory $postFactory)
+        \Mageplaza\HelloWorld\Model\PostFactory $postFactory
+    )
     {
         $this->_pageFactory = $pageFactory;
         $this->_postFactory = $postFactory;
@@ -19,11 +20,14 @@ class Index extends \Magento\Framework\App\Action\Action
 
     public function execute()
     {
-       // $post = $this->_postFactory->create();
-        $dataInsert = $this->_objectManager->create('Mageplaza\HelloWorld\Model\Post');
-        $dataInsert->setName('aaaaaaa');
-        $dataInsert->save();
-        $this->getResponse()->setBody('success');
+        $post = $this->_postFactory->create();
+        $collection = $post->getCollection();
+        foreach($collection as $item){
+            echo "<pre>";
+            print_r($item->getData());
+            echo "</pre>";
+        }
+        exit();
         return $this->_pageFactory->create();
     }
 }

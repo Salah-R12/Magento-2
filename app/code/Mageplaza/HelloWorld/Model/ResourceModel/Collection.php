@@ -3,7 +3,7 @@
 namespace Mageplaza\HelloWorld\Setup;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-
+//il faut rajouter ce fichier pour cette partie
 /**
  * Contact Resource Model Collection
  *
