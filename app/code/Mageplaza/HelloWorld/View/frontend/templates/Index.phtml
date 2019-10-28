@@ -1,1 +1,11 @@
 <h2>list of colors</h2>
+<?php
+
+//https://www.mageplaza.com/devdocs/how-get-product-collection-magento-2.html
+print_r('debut list produits');
+$productCollection = $block->getProductCollection();
+
+foreach ($productCollection as $product) {
+print_r($product->getData());
+echo "<br>";
+}
